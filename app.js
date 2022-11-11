@@ -1,4 +1,22 @@
+//Вывести в консоль заданную строку N раз
+
+let stringText = 'Этот текст нужно вывести в консоль 5 раз';
+let counter = 5;
+let textIteration = 0;
+let message = '';
+
+while (textIteration++ < counter) {
+  message += stringText + '.'+'\n';    
+ }
+
+ console.log (message); 
+
+
+
 // Что выведет комбинация данных логических операторов, и почему?
+
+let result = (null || 0 || "" || undefined);
+console.log(result);
 
 /* null || 0 || “” || undefined - ответ: undefined (для вычисления приводим значения к логическому типу)
 логическое ИЛИ вычисляет операнды слева направо и возвращает первое True. если все значения false - возвращает значение 
