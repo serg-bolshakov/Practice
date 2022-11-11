@@ -3,21 +3,27 @@
 станет меньше M, если известно, что в первый день продаж всего было N
 автомобилей*/
 
-let stockTotal = 17; // кол-во автомобилей в первый день продаж - N
+let stockTotal = 200; // кол-во автомобилей в первый день продаж - N
 let stockCurrent; //кол-во автомобилей на начало дня
-let stockMin = 4; //минимально возможный остаток авто на начало дня - М
+let stockMin = 20; //минимально возможный остаток авто на начало дня - М
 let soldCars; //кол-во проданных автомобилей за день
 let sellingDays = 0; //количество дней продаж
 
 stockCurrent = stockTotal;
 
-while (stockCurrent > stockMin) {
+// while (stockCurrent > stockMin) {
+//   stockCurrent = stockCurrent / 2; //кол-во доступных автомобилей уменьшилось в два раза
+//   sellingDays += 1;
+// }
+// //console.log (`${sellingDays}`);
+// console.log ("На", sellingDays, "-й день продаж количество автомобилей окажется меньше, чем это требуется для нормальной работы" );
+
+do {
   stockCurrent = stockCurrent / 2; //кол-во доступных автомобилей уменьшилось в два раза
   sellingDays += 1;
-}
+} while (stockCurrent > stockMin);
 //console.log (`${sellingDays}`);
 console.log ("На", sellingDays, "-й день продаж количество автомобилей окажется меньше, чем это требуется для нормальной работы" );
-
 
 
 
